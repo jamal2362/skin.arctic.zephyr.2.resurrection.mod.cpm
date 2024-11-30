@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window type="dialog" id="1180">
+    <defaultcontrol always="true">9000</defaultcontrol>
+    <onunload>ClearProperty(CustomDialogWindow.header)</onunload>
+    <onunload>ClearProperty(CustomDialogWindow.items)</onunload>
+    <controls>
+        <include>Global_Overlay</include>
+        <control type="group">
+            <include content="Dialog_Standard_Group">
+                <param name="width" value="780" />
+                <param name="height" value="430" />
+            </include>
+
+            <control type="label">
+                <align>center</align>
+                <label>32065</label>
+                <include>Dialog_Standard_Header</include>
+            </control>
+
+            <control type="grouplist" id="9000">
+                <onright>61</onright>
+                <description>Control Area</description>
+                <width>780</width>
+                <top>dialog_top</top>
+                <height>390</height>
+                <itemgap>0</itemgap>
+                <pagecontrol>61</pagecontrol>
+                <orientation>vertical</orientation>
+                <usecontrolcoords>true</usecontrolcoords>
+                <onright>Dialog.Close(1180)</onright>
+                <onleft>Dialog.Close(1180)</onleft>
+                <control type="button" id="2388">
+                    <include>Dialog_Standard_Right_Buttons</include>
+                    <label>$LOCALIZE[32064]</label>
+                    <selected>Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),5) | [[Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),0) | Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),1)] + String.Contains(Player.Process(video.hdr.type),Dolby)]</selected>
+                    <onclick>Action(vs10.original)</onclick>
+                    <onclick>Dialog.Close(1180)</onclick>
+                </control>
+                <control type="button" id="2389">
+                    <include>Dialog_Standard_Right_Buttons</include>
+                    <label>VS10 SDR</label>
+                    <selected>Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),3)</selected>
+                    <onclick>Action(vs10.sdr)</onclick>
+                    <onclick>Dialog.Close(1180)</onclick>
+                </control>
+                <control type="button" id="2390">
+                    <include>Dialog_Standard_Right_Buttons</include>
+                    
+                    <label>VS10 HDR10</label>
+                    <selected>Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),2)</selected>
+                    <onclick>Action(vs10.hdr10)</onclick>
+                    <onclick>Dialog.Close(1180)</onclick>
+                </control>
+                <control type="button" id="2391">
+                    <include>Dialog_Standard_Right_Buttons</include>
+                    
+                    <label>VS10 Dolby Vision</label>
+                    <selected>[Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),0) | Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),1)] + !String.Contains(Player.Process(video.hdr.type),Dolby)</selected>
+                    <onclick>Action(vs10.dv)</onclick>
+                    <onclick>Dialog.Close(1180)</onclick>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

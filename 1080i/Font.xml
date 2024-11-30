@@ -243,6 +243,23 @@
         </font>
 
         <include>VideoLyrics_Fonts</include>
+		
+        <!-- PlayerProcessInfo -->
+        <font>
+            <name>OpenSansSemiCondensed</name>
+            <filename>OpenSans_SemiCondensed-Medium.ttf</filename>
+            <size>23</size>
+        </font>
+        <font>
+            <name>ArialUni</name>
+            <filename>arialuni.ttf</filename>
+            <size>42</size>
+        </font>
+        <font>
+            <name>ArialUniSmall</name>
+            <filename>arialuni.ttf</filename>
+            <size>23</size>
+        </font>
 
     </fontset>
 
@@ -481,6 +498,23 @@
         </font>
 
         <include>VideoLyrics_Fonts</include>
+		
+        <!-- PlayerProcessInfo -->
+        <font>
+            <name>OpenSansSemiCondensed</name>
+            <filename>OpenSans_SemiCondensed-Medium.ttf</filename>
+            <size>23</size>
+        </font>
+        <font>
+            <name>ArialUni</name>
+            <filename>arialuni.ttf</filename>
+            <size>42</size>
+        </font>
+        <font>
+            <name>ArialUniSmall</name>
+            <filename>arialuni.ttf</filename>
+            <size>23</size>
+        </font>
 
     </fontset>
 
@@ -719,6 +753,23 @@
         </font>
 
         <include>VideoLyrics_Fonts</include>
+		
+        <!-- PlayerProcessInfo -->
+        <font>
+            <name>OpenSansSemiCondensed</name>
+            <filename>OpenSans_SemiCondensed-Medium.ttf</filename>
+            <size>23</size>
+        </font>
+        <font>
+            <name>ArialUni</name>
+            <filename>arialuni.ttf</filename>
+            <size>42</size>
+        </font>
+        <font>
+            <name>ArialUniSmall</name>
+            <filename>arialuni.ttf</filename>
+            <size>23</size>
+        </font>
 
     </fontset>
 
@@ -959,6 +1010,23 @@
         </font>
 
         <include>VideoLyrics_Fonts</include>
+		
+        <!-- PlayerProcessInfo -->
+        <font>
+            <name>OpenSansSemiCondensed</name>
+            <filename>OpenSans_SemiCondensed-Medium.ttf</filename>
+            <size>23</size>
+        </font>
+        <font>
+            <name>ArialUni</name>
+            <filename>arialuni.ttf</filename>
+            <size>42</size>
+        </font>
+        <font>
+            <name>ArialUniSmall</name>
+            <filename>arialuni.ttf</filename>
+            <size>23</size>
+        </font>
 
     </fontset>
 </fonts>
