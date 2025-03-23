@@ -529,7 +529,7 @@
             <visible>!VideoPlayer.Content(musicvideos)</visible>
             <visible>!Window.IsVisible(VideoOSDBookmarks.xml)</visible>
             <visible>!String.IsEmpty(Window(Home).Property(OSDInfo)) | Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(musicosd) | Window.IsActive(videoosd) | Window.IsActive(DialogFullScreenInfo.xml) | Window.IsVisible(DialogPlayerProcessInfo.xml)</visible>
-            <visible>!Window.IsVisible(1142)</visible>
+            <visible>!Window.IsVisible(1142) + !Window.IsVisible(1143)</visible>
             <animation effect="fade" start="0" end="100" time="300">VisibleChange</animation>
             <animation effect="fade" start="0" end="100" time="300" condition="![Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(musicosd) | Window.IsActive(videoosd) | Window.IsActive(DialogFullScreenInfo.xml)]">WindowOpen</animation>
             <control type="image">
@@ -632,8 +632,8 @@
                             <top>25</top>
                             <aligny>top</aligny>
                             <height>100</height>
-                            <width>1430</width>
-                            <scroll>false</scroll>
+                            <width>1440</width>
+                            <scroll>true</scroll>
                             <font>font_title_medium</font>
                             <textcolor>panel_fg_100</textcolor>
                             <label>$VAR[Label_OSD_Title]</label>
@@ -728,12 +728,13 @@
                         <bottom>0</bottom>
                         <right>0</right>
                         <align>bottom</align>
+                        <visible>!Skin.HasSetting(HideOSDInfoPanel)</visible>
                         <control type="label">
                             <top>25</top>
                             <aligny>top</aligny>
                             <height>80</height>
-                            <width>1430</width>
-                            <scroll>false</scroll>
+                            <width>1740</width>
+                            <scroll>true</scroll>
                             <font>font_title_medium</font>
                             <textcolor>panel_fg_100</textcolor>
                             <label>$VAR[Label_OSD_Title]</label>
@@ -764,7 +765,46 @@
                                 <textcolor>$VAR[ColorHighlight]</textcolor>
                                 <font>font_small</font>
                             </control>
-                            <include content="Object_Codecs_OSD" condition="Skin.HasSetting(DisableOSDInfo)">
+                            <include content="Object_Codecs_OSD" condition="Skin.HasSetting(DisableOSDInfo) + !Skin.HasSetting(HideOSDInfoPanel)">
+                                <param name="width" value="1760" />
+                            </include>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <left>0</left>
+                        <usecontrolcoords>false</usecontrolcoords>
+                        <itemgap>-2</itemgap>
+                        <bottom>0</bottom>
+                        <right>0</right>
+                        <align>bottom</align>
+                        <visible>Skin.HasSetting(HideOSDInfoPanel)</visible>
+                        <control type="group">
+                            <top>380</top>
+                            <control type="label">
+                                <top>25</top>
+                                <aligny>top</aligny>
+                                <height>80</height>
+                                <width>1140</width>
+                                <scroll>true</scroll>
+                                <font>font_title_medium</font>
+                                <textcolor>panel_fg_100</textcolor>
+                                <label>$VAR[Label_OSD_Title]</label>
+                                <visible>!Skin.HasSetting(ShowClearlogo) | !$EXP[Exp_Player_HasClearlogo]</visible>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <height>155</height>
+                            <width>620</width>
+                            <top>320</top>
+                            <visible>Skin.HasSetting(ShowClearlogo) + $EXP[Exp_Player_HasClearlogo]</visible>
+                            <control type="image">
+                                <aspectratio align="left" aligny="center">keep</aspectratio>
+                                <texture background="true">$VAR[Image_Player_Clearlogo]</texture>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <top>420</top>
+                            <include content="Object_Codecs_OSD" condition="Skin.HasSetting(DisableOSDInfo) + Skin.HasSetting(HideOSDInfoPanel)">
                                 <param name="width" value="1760" />
                             </include>
                         </control>
@@ -1148,7 +1188,6 @@
             <onclick>ActivateWindow(osdsubtitlesettings)</onclick>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
             <include>OSD_Button_OnFocus</include>
-            <onup condition="!Skin.HasSetting(OSD.DisablePopUpDialogs)">SetFocus(6207)</onup>
             <visible>Window.IsVisible(videoosd)</visible>
             <visible>!VideoPlayer.Content(LiveTV)</visible>
             <visible>!VideoPlayer.Content(musicvideos)</visible>
@@ -1170,7 +1209,6 @@
             <texturenofocus colordiffuse="panel_fg_70">osd/audio-settings.png</texturenofocus>
             <onclick>ActivateWindow(osdaudiosettings)</onclick>
             <include>OSD_Button_OnFocus</include>
-            <onup condition="!Skin.HasSetting(OSD.DisablePopUpDialogs)">SetFocus(6206)</onup>
             <visible>Window.IsVisible(videoosd)</visible>
             <visible>!VideoPlayer.Content(LiveTV)</visible>
             <visible>!VideoPlayer.Content(musicvideos)</visible>
@@ -1185,7 +1223,6 @@
             <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/video-settings.png</texturefocus>
             <texturenofocus colordiffuse="panel_fg_70">osd/video-settings.png</texturenofocus>
             <onclick>ActivateWindow(osdvideosettings)</onclick>
-            <onup condition="!Skin.HasSetting(OSD.DisablePopUpDialogs)">SetFocus(7800)</onup>
             <visible>!VideoPlayer.Content(musicvideos) + !Window.IsVisible(musicosd)</visible>
             <visible>!VideoPlayer.Content(LiveTV)</visible>
         </control>
@@ -2163,4 +2200,10 @@
             </control>
         </definition>
     </include>
+
+    <variable name="Action_OSD_Main_OnDown">
+        <value condition="!Skin.HasSetting(OSD.DisableCastDialog)">ActivateWindow(1142)</value>
+        <value condition="$EXP[Exp_OSD_HasPlaylist] + !Skin.HasSetting(OSD.DisableEpisodesDialog)">ActivateWindow(1143)</value>
+        <value>Close</value>
+    </variable>
 </includes>

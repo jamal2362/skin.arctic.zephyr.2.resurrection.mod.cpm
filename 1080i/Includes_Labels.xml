@@ -348,6 +348,7 @@
         <value condition="Window.IsVisible(Home) + !Skin.HasSetting(HomeMulti) + [Control.HasFocus(302) | Control.HasFocus(5610) | Control.HasFocus(301)]">$INFO[Container(301).ListItem.Label]</value>
         <value condition="Window.IsVisible(MyWeather.xml)">$LOCALIZE[8]</value>
         <value condition="Window.IsVisible(MyPlaylist.xml)">$LOCALIZE[559]</value>
+        <value condition="!String.IsEmpty(Container.PluginCategory)">$INFO[Container.PluginCategory]</value>
         <value condition="String.Contains(Container.FolderPath,/movies/) | Container.Content(movies)">$LOCALIZE[342]</value>
         <value condition="String.Contains(Container.FolderPath,/tvshows/) | String.Contains(Container.FolderPath,videodb://inprogresstvshows/) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$LOCALIZE[20343]</value>
         <value condition="String.Contains(Container.FolderPath,sources://video)">$LOCALIZE[31159]</value>
@@ -380,6 +381,7 @@
 
     <variable name="Label_OSD_Duration">
         <value condition="PVR.IsPlayingTV + !String.IsEmpty(PVR.EpgEventDuration)">$INFO[PVR.EpgEventDuration]</value>
+        <value condition="Skin.HasSetting(ShowTimeRemaining2) + !String.IsEmpty(Player.TimeRemaining)">$INFO[Player.TimeRemaining]</value>
         <value>$INFO[Player.Duration]</value>
     </variable>
     
@@ -405,7 +407,8 @@
 
     <variable name="Label_OSD_InfoLine">
         <value condition="[!String.IsEmpty(VideoPlayer.EpgEventTitle) | !String.IsEmpty(VideoPlayer.EpisodeName)] + VideoPlayer.Content(livetv)">$INFO[VideoPlayer.EpisodeName,[COLOR=panel_fg_100],[/COLOR]  |  ]$INFO[VideoPlayer.EpgEventTitle,[COLOR=panel_fg_100],[/COLOR]  |  ]$INFO[VideoPlayer.Year,[COLOR=panel_fg_100],[/COLOR]  |  ]$INFO[VideoPlayer.MPAA,[COLOR=panel_fg_100],[/COLOR]  |  ]$INFO[VideoPlayer.Genre,[COLOR=panel_fg_100],[/COLOR]]</value>
-        <value condition="!String.IsEmpty(VideoPlayer.Season) + !String.IsEmpty(VideoPlayer.Episode)">$INFO[VideoPlayer.Title,[COLOR=panel_fg_100],[/COLOR]]$INFO[VideoPlayer.Season,  |  [COLOR=panel_fg_100]S,[/COLOR]]$INFO[VideoPlayer.Episode,[COLOR=panel_fg_100]E,[/COLOR]]$INFO[VideoPlayer.Premiered,  |  [COLOR=panel_fg_100],[/COLOR]]$INFO[VideoPlayer.MPAA,  |  [COLOR=panel_fg_100],[/COLOR]]$INFO[VideoPlayer.Genre,  |  [COLOR=panel_fg_100],[/COLOR]]</value>
+        <value condition="!String.IsEmpty(VideoPlayer.Season) + !String.IsEmpty(VideoPlayer.Episode) + !Integer.IsGreater(VideoPlayer.Episode,9)">$INFO[VideoPlayer.Title,[COLOR=panel_fg_100],[/COLOR]]$INFO[VideoPlayer.Season,  |  [COLOR=panel_fg_100],x[/COLOR]]$INFO[VideoPlayer.Episode,[COLOR=panel_fg_100]0,[/COLOR]]$INFO[VideoPlayer.Premiered,  |  [COLOR=panel_fg_100],[/COLOR]]$INFO[VideoPlayer.MPAA,  |  [COLOR=panel_fg_100],[/COLOR]]$INFO[VideoPlayer.Genre,  |  [COLOR=panel_fg_100],[/COLOR]]</value>
+        <value condition="!String.IsEmpty(VideoPlayer.Season) + !String.IsEmpty(VideoPlayer.Episode) + Integer.IsGreater(VideoPlayer.Episode,9)">$INFO[VideoPlayer.Title,[COLOR=panel_fg_100],[/COLOR]]$INFO[VideoPlayer.Season,  |  [COLOR=panel_fg_100],x[/COLOR]]$INFO[VideoPlayer.Episode,[COLOR=panel_fg_100],[/COLOR]]$INFO[VideoPlayer.Premiered,  |  [COLOR=panel_fg_100],[/COLOR]]$INFO[VideoPlayer.MPAA,  |  [COLOR=panel_fg_100],[/COLOR]]$INFO[VideoPlayer.Genre,  |  [COLOR=panel_fg_100],[/COLOR]]</value>
         <value>$INFO[VideoPlayer.Year,[COLOR=panel_fg_100],[/COLOR]  |  ]$INFO[VideoPlayer.MPAA,[COLOR=panel_fg_100],[/COLOR]  |  ]$INFO[VideoPlayer.Genre,[COLOR=panel_fg_100],[/COLOR]]</value>
     </variable>
 
@@ -538,8 +541,6 @@
         <value condition="[Window.IsVisible(DialogPVRInfo.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRGuide.xml)]">$VAR[Label_SeasonEpisodeLabel_NoColon,[COLOR=main_fg_100],[/COLOR]  |  ]$INFO[ListItem.EpisodeName,[COLOR=main_fg_100],[/COLOR]  |  ]$INFO[ListItem.Genre,[COLOR=main_fg_100],[/COLOR]]</value>
 
         <value condition="!String.IsEmpty(ListItem.Genre)">$INFO[ListItem.Genre,[COLOR=main_fg_100],[/COLOR]]</value>
-
-        <value>[COLOR=main_fg_100]$LOCALIZE[19055][/COLOR]</value>
     </variable>
 
     <variable name="Label_Title">

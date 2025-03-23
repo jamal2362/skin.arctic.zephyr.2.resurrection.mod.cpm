@@ -55,7 +55,7 @@
                 <control type="textbox">
                     <left>view_pad</left>
                     <right>view_pad</right>
-                    <label fallback="19055">$VAR[Label_Plot]</label>
+                    <label>$VAR[Label_Plot]</label>
                     <height>$PARAM[plotheight]</height>
                     <aligny>center</aligny>
                     <align>center</align>
@@ -907,6 +907,7 @@
                 <onleft>523</onleft>
                 <onright>523</onright>
                 <onup>300</onup>
+                <ondown>62</ondown>
                 <centerleft>50%</centerleft>
                 <orientation>horizontal</orientation>
                 <width>1760</width>
