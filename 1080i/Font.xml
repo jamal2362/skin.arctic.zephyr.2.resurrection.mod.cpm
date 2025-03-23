@@ -251,19 +251,14 @@
 		
         <!-- PlayerProcessInfo -->
         <font>
-            <name>OpenSansSemiCondensed</name>
-            <filename>OpenSans_SemiCondensed-Medium.ttf</filename>
-            <size>23</size>
+            <name>font_tiny1</name>
+            <filename>Inter-Unicode-Regular.ttf</filename>
+            <size>21</size>
         </font>
         <font>
-            <name>ArialUni</name>
-            <filename>arialuni.ttf</filename>
-            <size>42</size>
-        </font>
-        <font>
-            <name>ArialUniSmall</name>
-            <filename>arialuni.ttf</filename>
-            <size>23</size>
+            <name>font_tiny_iconic</name>
+            <filename>fa-solid-900.ttf</filename>
+            <size>22</size>
         </font>
 
     </fontset>
@@ -511,19 +506,14 @@
 		
         <!-- PlayerProcessInfo -->
         <font>
-            <name>OpenSansSemiCondensed</name>
-            <filename>OpenSans_SemiCondensed-Medium.ttf</filename>
-            <size>23</size>
+            <name>font_tiny1</name>
+            <filename>Inter-Unicode-Regular.ttf</filename>
+            <size>21</size>
         </font>
         <font>
-            <name>ArialUni</name>
-            <filename>arialuni.ttf</filename>
-            <size>42</size>
-        </font>
-        <font>
-            <name>ArialUniSmall</name>
-            <filename>arialuni.ttf</filename>
-            <size>23</size>
+            <name>font_tiny_iconic</name>
+            <filename>fa-solid-900.ttf</filename>
+            <size>22</size>
         </font>
 
     </fontset>
@@ -766,19 +756,14 @@
 		
         <!-- PlayerProcessInfo -->
         <font>
-            <name>OpenSansSemiCondensed</name>
-            <filename>OpenSans_SemiCondensed-Medium.ttf</filename>
-            <size>23</size>
+            <name>font_tiny1</name>
+            <filename>Inter-Unicode-Regular.ttf</filename>
+            <size>21</size>
         </font>
         <font>
-            <name>ArialUni</name>
-            <filename>arialuni.ttf</filename>
-            <size>42</size>
-        </font>
-        <font>
-            <name>ArialUniSmall</name>
-            <filename>arialuni.ttf</filename>
-            <size>23</size>
+            <name>font_tiny_iconic</name>
+            <filename>fa-solid-900.ttf</filename>
+            <size>22</size>
         </font>
 
     </fontset>
@@ -1023,19 +1008,14 @@
 		
         <!-- PlayerProcessInfo -->
         <font>
-            <name>OpenSansSemiCondensed</name>
-            <filename>OpenSans_SemiCondensed-Medium.ttf</filename>
-            <size>23</size>
+            <name>font_tiny1</name>
+            <filename>Inter-Unicode-Regular.ttf</filename>
+            <size>21</size>
         </font>
         <font>
-            <name>ArialUni</name>
-            <filename>arialuni.ttf</filename>
-            <size>42</size>
-        </font>
-        <font>
-            <name>ArialUniSmall</name>
-            <filename>arialuni.ttf</filename>
-            <size>23</size>
+            <name>font_tiny_iconic</name>
+            <filename>fa-solid-900.ttf</filename>
+            <size>22</size>
         </font>
 
     </fontset>
