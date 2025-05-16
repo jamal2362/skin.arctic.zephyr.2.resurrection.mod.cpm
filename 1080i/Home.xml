@@ -76,6 +76,7 @@
             <include condition="Skin.HasSetting(HomeMultiVertical) | ![Skin.HasSetting(HomeMultiFlixView) | Skin.HasSetting(HomeMultiNetflix) | Skin.HasSetting(HomeMultiHorizontal) | Skin.HasSetting(HomeBasic)]">Home_Multi_Vertical</include>
             <include condition="Skin.HasSetting(HomeMultiHorizontal)">Home_Multi_Horizontal</include>
             <include condition="Skin.HasSetting(HomeBasic)">Home_Simple</include>
+            <include condition="System.GetBool(lookandfeel.enablerssfeeds) + [!Window.IsVisible(screencalibration) + !Window.IsVisible(screensaver) + !Window.IsVisible(startup) + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(slideshow)]">RSS_Feeds</include>
         </control>
         <include>Object_PlotOverlay</include>
 
@@ -84,7 +85,7 @@
             <visible>!Skin.HasSetting(DisplaySplashOnStartup)</visible>
             <control type="image" description="Background">
                 <include>Dimensions_Fullscreen</include>
-                <texture colordiffuse="Background">common/bg.jpg</texture>
+                <texture colordiffuse="Background">special://skin/extras/backgrounds/bg.jpg</texture>
                 <visible>String.IsEmpty(Skin.String(StartupPlaylist))</visible>
                 <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating | Window.IsVisible(1151)</visible>
                 <animation effect="fade" start="100" end="0" delay="1000" time="1000" tween="cubic">Hidden</animation>

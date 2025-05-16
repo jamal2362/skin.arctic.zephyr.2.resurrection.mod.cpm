@@ -736,7 +736,7 @@ msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31149"
-msgid "Clock and weather"
+msgid "Clock and weather in all windows (except home)"
 msgstr ""
 
 msgctxt "#31150"
@@ -2227,6 +2227,16 @@ msgctxt "#31509"
 msgid "Hide header"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31510"
+msgid "Clock and weather in home window"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31511"
+msgid "Hide chapters mark"
+msgstr ""
+
 msgctxt "#32000"
 msgid "Display mode"
 msgstr ""
@@ -2489,3 +2499,4 @@ msgstr ""
 
 msgctxt "#32067"
 msgid "L5 Active Offsets"
+msgstr ""
