@@ -294,6 +294,18 @@
         </font>
 
         <include>VideoLyrics_Fonts</include>
+		
+        <!-- PlayerProcessInfo -->
+        <font>
+            <name>font_tiny1</name>
+            <filename>Inter-Unicode-Regular.ttf</filename>
+            <size>21</size>
+        </font>
+        <font>
+            <name>font_tiny_iconic</name>
+            <filename>fa-solid-900.ttf</filename>
+            <size>22</size>
+        </font>
 
     </fontset>
 
@@ -583,6 +595,18 @@
         </font>
 
         <include>VideoLyrics_Fonts</include>
+		
+        <!-- PlayerProcessInfo -->
+        <font>
+            <name>font_tiny1</name>
+            <filename>Inter-Unicode-Regular.ttf</filename>
+            <size>21</size>
+        </font>
+        <font>
+            <name>font_tiny_iconic</name>
+            <filename>fa-solid-900.ttf</filename>
+            <size>22</size>
+        </font>
 
     </fontset>
 
@@ -821,6 +845,18 @@
         </font>
 
         <include>VideoLyrics_Fonts</include>
+		
+        <!-- PlayerProcessInfo -->
+        <font>
+            <name>font_tiny1</name>
+            <filename>Inter-Unicode-Regular.ttf</filename>
+            <size>21</size>
+        </font>
+        <font>
+            <name>font_tiny_iconic</name>
+            <filename>fa-solid-900.ttf</filename>
+            <size>22</size>
+        </font>
 
     </fontset>
 
@@ -1117,6 +1153,18 @@
         </font>
 
         <include>VideoLyrics_Fonts</include>
+		
+        <!-- PlayerProcessInfo -->
+        <font>
+            <name>font_tiny1</name>
+            <filename>Inter-Unicode-Regular.ttf</filename>
+            <size>21</size>
+        </font>
+        <font>
+            <name>font_tiny_iconic</name>
+            <filename>fa-solid-900.ttf</filename>
+            <size>22</size>
+        </font>
 
     </fontset>
 

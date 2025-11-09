@@ -32,6 +32,7 @@
     <include file="Includes_Weather.xml" />
     <include file="Includes_AEL.xml" />
     <include file="Includes_PVRWidgets.xml" />
+    <include file="Includes_CodecLogos.xml"/>
 
     <include file="Includes_View.xml" />
 
