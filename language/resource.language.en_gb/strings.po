@@ -2277,6 +2277,11 @@ msgctxt "#31521"
 msgid "Highlight"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31522"
+msgid "Startup image"
+msgstr ""
+
 msgctxt "#32000"
 msgid "Display mode"
 msgstr ""
@@ -2567,7 +2572,7 @@ msgstr ""
 
 msgctxt "#32077"
 msgid "System"
-msgstr "System"
+msgstr ""
 
 msgctxt "#32078"
 msgid "Decoding"
