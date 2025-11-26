@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic: Zephyr 2 - Resurrection (CPM)" provider-name="jurialmunkey, pkscout, heppen, jamal2362" version="16.1.1.1">
+<addon id="skin.arctic.zephyr.2.resurrection.mod" name="Arctic: Zephyr 2 - Resurrection (CPM)" provider-name="jurialmunkey, pkscout, heppen, jamal2362" version="17.1.1.1">
     <requires>
         <import addon="xbmc.gui" version="5.17.0" />
         <import addon="script.skinshortcuts"/>
