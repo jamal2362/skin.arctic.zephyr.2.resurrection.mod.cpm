@@ -532,7 +532,7 @@ msgstr "Koniec: "
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31107"
 msgid "Item limit"
-msgstr "Limit przedmiotów"
+msgstr "Limit pozycji"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31108"
@@ -682,8 +682,8 @@ msgstr "Dodatki i funkcje specjalne"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31139"
-msgid "Widgets and Layout"
-msgstr "Widgety i układ"
+msgid "Layout"
+msgstr "Ustawienia strony głównej"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31140"
@@ -2266,3 +2266,13 @@ msgstr "Kolor podświetlenia"
 msgctxt "#31522"
 msgid "Startup image"
 msgstr "Obraz ekranu ładowania"
+
+#: /1080i/script-skinshortcuts.xml
+msgctxt "#31523"
+msgid "Autoscroll"
+msgstr "Automatyczne przewijanie"
+
+#: /1080i/script-skinshortcuts.xml
+msgctxt "#31524"
+msgid "Show \"more...\" folder in widgets"
+msgstr "Pokazuj folder \"więcej...\" w widgetach"
